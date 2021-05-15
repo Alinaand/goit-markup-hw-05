@@ -93,6 +93,19 @@ a span{
     display: block;
     
   }
+  .menu-item {
+    position: relative;
+  }
+  .menu-item.current::after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    color: var(--accent-cl);  
+  }
 
   .menu-item {
     font-style: normal;
