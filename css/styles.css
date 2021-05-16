@@ -58,8 +58,8 @@ p {
 }
 /* header */
 .page-header{
-padding-top: 24px;
-padding-bottom: 24px;
+/*padding-top: 24px;
+padding-bottom: 24px;*/
 border-bottom: 1px solid #ECECEC;
 }
 .page-header .container {
@@ -91,20 +91,25 @@ a span{
 
   .menu .link {
     display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     
   }
   .menu-item {
     position: relative;
   }
-  .menu-item.current::after {
+  .current:active {
+    color: var(--accent-cl);
+  }
+.current::after {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     display: block;
     content: "";
     height: 4px;
     width: 100%;
     border-radius: 2px;
-    color: var(--accent-cl);  
+   background: var(--accent-cl);  
   }
 
   .menu-item {
@@ -341,8 +346,33 @@ color:var(--secondary-text-cl);
   display: blocks;
 }
 .card-about {
+  display: flex;
   flex-basis: calc((100% - 90px) / 3);
   margin-right: 30px;
+}
+.card-text{
+position: absolute;
+bottom: 0;
+ 
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+margin-bottom: 0;
+line-height: 16px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+padding-top: 27px;
+padding-bottom: 27px;
+width: 100%;
+
+color: var(--alt-text-cl);
+background: rgba(47, 48, 58, 0.8)
+}
+.card-about-text{
+  position: relative;
+  display: flex;
+
 }
 /*about team*/
 
